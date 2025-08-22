@@ -77,7 +77,7 @@ export function howToPlayInit(back, start) {
         },
         {
             label: "WASD Movement",
-            keys: ["W", "A", "S", "D"],
+            keys: ["Z", "Q", "S", "D"],
             baseColor: "#224444",
             images: wasdImage,
         },

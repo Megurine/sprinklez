@@ -1390,10 +1390,10 @@ function update(time) {
     let velocityY = 0;
 
     if (movementKeys["z"] || movementKeys["w"]) velocityY = -1;
-    if (movementKeys["s"]) velocityY = 10;
+    if (movementKeys["s"]) velocityY = 1;
     if (movementKeys["q"] || movementKeys["a"]) velocityX = -1;
     if (movementKeys["d"] || movementKeys["e"]) velocityX = 1;
-
+console.log(movementKeys["s"]);
     if (velocityX !== 0 && velocityY !== 0) {
         velocityX *= Math.SQRT1_2;
         velocityY *= Math.SQRT1_2;
