@@ -764,17 +764,17 @@ const units = {
 }
 
 let movementKeys = {
-    "w": false,
-    "a": false, "q": false,
+    "z": false,
+    "q": false, "a": false,
     "s": false,
     "d": false, "e": false,
 }
 
 let spellKeys ={
-    "1": {id: "amberstrike", time: 0} ,
-    "2": {id: "struggle", time: 0} ,
-    "3": {id: "consume", time: 0} ,
-    "4": {id: "break", time: 0} ,
+    "&": {id: "amberstrike", time: 0} ,
+    "é": {id: "struggle", time: 0} ,
+    '"': {id: "consume", time: 0} ,
+    "'": {id: "break", time: 0} ,
 }
 
 function playAmbience() {
