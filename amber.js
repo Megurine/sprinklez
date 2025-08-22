@@ -772,7 +772,7 @@ let movementKeys = {
 
 let spellKeys ={
     "1": {id: "amberstrike", time: 0} ,
-    "2": {id: "struggle", time: 0} ,
+    "b": {id: "struggle", time: 0} ,
     "3": {id: "consume", time: 0} ,
     "4": {id: "break", time: 0} ,
 }
@@ -1389,9 +1389,9 @@ function update(time) {
     let velocityX = 0;
     let velocityY = 0;
 
-    if (movementKeys["w"]) velocityY = -1;
+    if (movementKeys["z"] || movementKeys["w"]) velocityY = -1;
     if (movementKeys["s"]) velocityY = 1;
-    if (movementKeys["a"] || movementKeys["q"]) velocityX = -1;
+    if (movementKeys["q"] || movementKeys["a"]) velocityX = -1;
     if (movementKeys["d"] || movementKeys["e"]) velocityX = 1;
 
     if (velocityX !== 0 && velocityY !== 0) {
