@@ -1393,7 +1393,7 @@ function update(time) {
     if (movementKeys["s"]) velocityY = 1;
     if (movementKeys["q"] || movementKeys["a"]) velocityX = -1;
     if (movementKeys["d"] || movementKeys["e"]) velocityX = 1;
-console.log(movementKeys["s"]);
+
     if (velocityX !== 0 && velocityY !== 0) {
         velocityX *= Math.SQRT1_2;
         velocityY *= Math.SQRT1_2;
