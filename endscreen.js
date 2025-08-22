@@ -8,8 +8,8 @@ const context = canvasElement.getContext("2d");
 
 const { width, height } = canvasElement;
 const winImage = newImage("images/wooo2.webp");
-const victorySound = newAudio("sounds/victory.ogg", 0.5);
-const failureSound = newAudio("sounds/failure.ogg", 0.5);
+const victorySound = newAudio("sounds/victory.ogg", 0.1);
+const failureSound = newAudio("sounds/failure.ogg", 0.1);
 
 function drawEndScreenImage(colors, onLoadCallback) {
   if (winImage.complete) {

@@ -19,15 +19,15 @@ const wiggleAmount = 0.8 * Math.PI / 180;
 
 const muteIcon = MuteIcon({autoRedraw: false, x: 770, y: 6, size: 20});
 const music = [
-    newAudio("sounds/music/1.mp3", 0.3),
-    newAudio("sounds/music/4.mp3", 0.3),
-    newAudio("sounds/music/3.mp3", 0.3),
-    newAudio("sounds/music/2.mp3", 0.2), 
+    newAudio("sounds/music/1.mp3", 0.1),
+    newAudio("sounds/music/4.mp3", 0.1),
+    newAudio("sounds/music/3.mp3", 0.1),
+    newAudio("sounds/music/2.mp3", 0.1), 
 ];
 
 const ambience = [
-    newAudio("sounds/ambience/1.ogg", 0.15),
-    newAudio("sounds/ambience/2.ogg", 0.15),
+    newAudio("sounds/ambience/1.ogg", 0.05),
+    newAudio("sounds/ambience/2.ogg", 0.05),
 ];
 
 const blackBoard = {
@@ -340,7 +340,7 @@ let gameEventsTimer;
 
 let tutorialMode = true;
 let raidWarning = "";
-const raidWarningSound = newAudio("sounds/raidwarning.ogg", 0.5);
+const raidWarningSound = newAudio("sounds/raidwarning.ogg", 0.2);
 const puddles = [];
 const precomputedCracks = [];
 const floorBox = [[48,0],[272,0],[288,32],[320,48],[320,272],[288,288],[272,320],[48,320],[32,288],[0,272],[0,48],[32,32]];
@@ -368,7 +368,7 @@ const units = {
                     casting: -1,
                     spells: [
                                 { name: "Amber Explosion(YOU)", lastCast: -1, cooldown: 13, castTime: 2, interruptible: false },
-                                { name: "Frostbolt", lastCast: -1, cooldown: 0, castTime: 2, interruptible: false, exclude: true, sound: {precast: newAudio('sounds/redPlayer/prefrost.ogg', 0.2), cast: newAudio('sounds/redPlayer/frost.ogg', 0.2), hit: newAudio('sounds/redPlayer/frosthit.ogg', 0.2) } },
+                                { name: "Frostbolt", lastCast: -1, cooldown: 0, castTime: 2, interruptible: false, exclude: true, sound: {precast: newAudio('sounds/redPlayer/prefrost.ogg', 0.1), cast: newAudio('sounds/redPlayer/frost.ogg', 0.2), hit: newAudio('sounds/redPlayer/frosthit.ogg', 0.2) } },
                             ],
                     target: undefined,
                     behavior: function() {
@@ -402,22 +402,22 @@ const units = {
                     },
                     raiderSound: {
                         audio: [
-                            newAudio("sounds/redPlayer/walk1.ogg", 0.2, 1.1),
-                            newAudio("sounds/redPlayer/walk2.ogg", 0.2, 1.1),
-                            newAudio("sounds/redPlayer/walk3.ogg", 0.2, 1.1),
-                            newAudio("sounds/redPlayer/walk4.ogg", 0.2, 1.1),
-                            newAudio("sounds/redPlayer/walk5.ogg", 0.2, 1.1),
+                            newAudio("sounds/redPlayer/walk1.ogg", 0.1, 1.1),
+                            newAudio("sounds/redPlayer/walk2.ogg", 0.1, 1.1),
+                            newAudio("sounds/redPlayer/walk3.ogg", 0.1, 1.1),
+                            newAudio("sounds/redPlayer/walk4.ogg", 0.1, 1.1),
+                            newAudio("sounds/redPlayer/walk5.ogg", 0.1, 1.1),
                         ],
                         playingIndex: 1,
                         playing: false,
                     },
                     monstrositySound: {
                         audio: [
-                            newAudio("sounds/redPlayer/amber1.ogg", 0.15, 1.4),
-                            newAudio("sounds/redPlayer/amber2.ogg", 0.15, 1.4),
-                            newAudio("sounds/redPlayer/amber3.ogg", 0.15, 1.4),
-                            newAudio("sounds/redPlayer/amber4.ogg", 0.15, 1.4),
-                            newAudio("sounds/redPlayer/amber5.ogg", 0.15, 1.4),
+                            newAudio("sounds/redPlayer/amber1.ogg", 0.1, 1.4),
+                            newAudio("sounds/redPlayer/amber2.ogg", 0.1, 1.4),
+                            newAudio("sounds/redPlayer/amber3.ogg", 0.1, 1.4),
+                            newAudio("sounds/redPlayer/amber4.ogg", 0.1, 1.4),
+                            newAudio("sounds/redPlayer/amber5.ogg", 0.1, 1.4),
                         ],
                         playingIndex: 1,
                         playing: false,
@@ -601,7 +601,7 @@ const units = {
                         hp: 1000000000,
                         maxhp: 1000000000,
                         image: newImage("images/amber-shaper.png"),
-                        spawnSound: newAudio('sounds/unsok/spawn.ogg', 0.50),
+                        spawnSound: newAudio('sounds/unsok/spawn.ogg', 0.20),
                         behavior: function() {
                             return Selector([
                                 Sequence([
@@ -690,11 +690,11 @@ const units = {
                         casting: -1,
                         sound: {
                         audio: [
-                            newAudio("sounds/redPlayer/amber1.ogg", 0.2, 1.4),
-                            newAudio("sounds/redPlayer/amber2.ogg", 0.2, 1.4),
-                            newAudio("sounds/redPlayer/amber3.ogg", 0.2, 1.4),
-                            newAudio("sounds/redPlayer/amber4.ogg", 0.2, 1.4),
-                            newAudio("sounds/redPlayer/amber5.ogg", 0.2, 1.4),
+                            newAudio("sounds/redPlayer/amber1.ogg", 0.1, 1.4),
+                            newAudio("sounds/redPlayer/amber2.ogg", 0.1, 1.4),
+                            newAudio("sounds/redPlayer/amber3.ogg", 0.1, 1.4),
+                            newAudio("sounds/redPlayer/amber4.ogg", 0.1, 1.4),
+                            newAudio("sounds/redPlayer/amber5.ogg", 0.1, 1.4),
                         ],
                         playingIndex: 1,
                         playing: false,
@@ -705,8 +705,8 @@ const units = {
                         hp: 327000000,
                         maxhp: 327000000,
                         image: newImage("images/amber.webp"),
-                        spawnSound: newAudio('sounds/monstrosity/spawn.ogg', 0.15),
-                        deathSound: newAudio('sounds/unsok/p3.ogg', 0.15),
+                        spawnSound: newAudio('sounds/monstrosity/spawn.ogg', 0.1),
+                        deathSound: newAudio('sounds/unsok/p3.ogg', 0.1),
                         behavior: function() {
                             return Selector([
                                 Sequence([
@@ -1525,10 +1525,10 @@ function toggleActionBars(){
 }
 
 const abilitySounds = {
-    "amberstrike1": newAudio("sounds/redPlayer/as1.ogg",0.4),
-    "amberstrike2": newAudio("sounds/redPlayer/as2.ogg",0.4),
+    "amberstrike1": newAudio("sounds/redPlayer/as1.ogg",0.1),
+    "amberstrike2": newAudio("sounds/redPlayer/as2.ogg",0.1),
     "struggle": newAudio("sounds/redPlayer/struggle.ogg",0.1),
-    "consume": newAudio("sounds/redPlayer/consume.ogg",0.3),
+    "consume": newAudio("sounds/redPlayer/consume.ogg",0.1),
     // "break": newAudio("sounds/redPlayer/break.ogg",0.5),  //no sound?
 }
 
