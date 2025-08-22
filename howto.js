@@ -76,7 +76,7 @@ export function howToPlayInit(back, start) {
             images: tabImage,
         },
         {
-            label: "WASD Movement",
+            label: "ZQSD Movement",
             keys: ["Z", "Q", "S", "D"],
             baseColor: "#224444",
             images: wasdImage,
