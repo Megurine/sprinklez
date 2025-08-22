@@ -16,7 +16,7 @@ const featherThickness = 15;
 const hitZones = [];
 
 const muteIcon = MuteIcon();
-const music = newAudio("sounds/music/snow.mp3", 0.3);
+//const music = newAudio("sounds/music/snow.mp3", 0.3);
 const bossImage = newImage("images/amber-shaper-title.webp");
 const raiderImage = newImage("images/will-title.webp");
 const bottombg = newImage("images/bg-title.webp");
@@ -428,8 +428,8 @@ function cleanupTitle(){
 
 function enableMusicAutoplayOnUserInput() {
   const unlock = () => {
-    music.loop = "true";
-    AudioManager.play(music);
+    //music.loop = "true";
+    //AudioManager.play(music);
     window.removeEventListener('pointerdown', unlock);
     window.removeEventListener('keydown', unlock);
   };
