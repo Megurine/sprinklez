@@ -771,10 +771,10 @@ let movementKeys = {
 }
 
 let spellKeys ={
-    "1": {id: "amberstrike", time: 0} ,
-    "b": {id: "struggle", time: 0} ,
-    "3": {id: "consume", time: 0} ,
-    "4": {id: "break", time: 0} ,
+    "&": {id: "amberstrike", time: 0} ,
+    "é": {id: "struggle", time: 0} ,
+    '"': {id: "consume", time: 0} ,
+    "'": {id: "break", time: 0} ,
 }
 
 function playAmbience() {
@@ -1476,6 +1476,8 @@ document.addEventListener("keypress", event => {
 document.addEventListener("keypress", event => {
     if (typeof spellKeys[event.key] === 'undefined') return;
     const button = document.querySelector(`#${spellKeys[event.key].id}`);
+	if(button === 'undefined') return;
+	event.preventDefault();
     if (units["redPlayer"].amber) { 
         button.click();
     } else {
