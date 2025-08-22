@@ -1390,7 +1390,7 @@ function update(time) {
     let velocityY = 0;
 
     if (movementKeys["z"] || movementKeys["w"]) velocityY = -1;
-    if (movementKeys["s"]) velocityY = 1;
+    if (movementKeys["s"]) velocityY = 10;
     if (movementKeys["q"] || movementKeys["a"]) velocityX = -1;
     if (movementKeys["d"] || movementKeys["e"]) velocityX = 1;
 
